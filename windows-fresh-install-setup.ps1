@@ -4,10 +4,10 @@ Write-Host "`n------------------------------------------------------------------
 Write-Host "--------------------- Initializing Mei Windows Fresh Install Setup Script ---------------------" -ForegroundColor cyan
 Write-Host "-----------------------------------------------------------------------------------------------`n" -ForegroundColor cyan
 
-$shouldInstallDefaultApps = (Read-Host "Do you want to install the default apps? [y/N]") -eq 'y'
-$shouldInstallDevelopmentApps = (Read-Host "Do you want to setup this machine for development? [y/N]") -eq 'y'
-$shouldInstallGamingApps = (Read-Host "Do you want to setup this machine for gaming? [y/N]") -eq 'y'
-$shouldInstallWorkApps = (Read-Host "Do you want to setup this machine for work? [y/N]") -eq 'y'
+$shouldInstallBaseApps = (Read-Host "Do you want to install the base app selection? [y/N]") -eq 'y'
+$shouldInstallDevelopmentApps = (Read-Host "Do you want to set up this machine for development? [y/N]") -eq 'y'
+$shouldInstallGamingApps = (Read-Host "Do you want to set up this machine for gaming? [y/N]") -eq 'y'
+$shouldInstallWorkApps = (Read-Host "Do you want to set up this machine for work? [y/N]") -eq 'y'
 $shouldInstallFonts = (Read-Host "Do you want to install fonts? [y/N]") -eq 'y'
 $shouldInstallAdminTools = (Read-Host "Do you want to install system admin tools? [y/N]") -eq 'y'
 
@@ -25,9 +25,9 @@ scoop bucket add java
 scoop bucket add nerd-fonts
 scoop update
 
-# Default Installs
-if ($shouldInstallDefaultApps) {
-    Write-Host "`n--------------------------------- Installing Default Apps ---------------------------------`n" -ForegroundColor cyan
+# Base Installs
+if ($shouldInstallBaseApps) {
+    Write-Host "`n---------------------------------- Installing Base Apps -----------------------------------`n" -ForegroundColor cyan
     scoop install 7zip
     regedit /s $home\scoop\apps\7zip\current\install-context.reg # Adding 7-Zip as a context menu option
     scoop install teamviewer
