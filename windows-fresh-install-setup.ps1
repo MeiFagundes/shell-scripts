@@ -30,12 +30,13 @@ if ($shouldInstallBaseApps) {
     Write-Host "`n---------------------------------- Installing Base Apps -----------------------------------`n" -ForegroundColor cyan
     scoop install 7zip
     regedit /s $home\scoop\apps\7zip\current\install-context.reg # Adding 7-Zip as a context menu option
-    scoop install teamviewer
     scoop install discord
     scoop install deluge
     scoop install gimp
     winget install --id=Parsec.Parsec -e -h
     winget install --id=Stremio.Stremio -e -h
+    winget install --id=Ytmdesktop.Ytmdesktop -e -h
+    winget install TeamViewer.TeamViewer
     Write-Output "`n- Installing all Visual C++ Redistributable runtime libraries`n"
     scoop install vcredist
     scoop uninstall vcredist2005 vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist # Cleaning installers after installing VC++ Redistributable on the system
