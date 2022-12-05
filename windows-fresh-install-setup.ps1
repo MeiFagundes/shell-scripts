@@ -32,7 +32,6 @@ if ($shouldInstallBaseApps) {
     regedit /s $home\scoop\apps\7zip\current\install-context.reg # Adding 7-Zip as a context menu option
     scoop install discord
     scoop install deluge
-    scoop install gimp
     winget install --id=Parsec.Parsec -e -h
     winget install --id=Stremio.Stremio -e -h
     winget install --id=Ytmdesktop.Ytmdesktop -e -h
@@ -46,13 +45,13 @@ if ($shouldInstallBaseApps) {
 # Development
 if ($shouldInstallDevelopmentApps) {
     Write-Host "`n------------------------------- Installing Development Tools ------------------------------`n" -ForegroundColor cyan
-    scoop install gitkraken
     scoop install nodejs
     scoop install yarn
     scoop install openjdk
     scoop install openjdk8-redhat-jre
     scoop install android-studio
-    scoop install vscode
+    winget install --id=Microsoft.VisualStudioCode -e -h
+    winget install --id=Axosoft.GitKraken -e -h
     regedit /s $home\scoop\apps\vscode\current\install-context.reg # Adding Visual Studio Code as a context menu option
     winget install --id=UnityTechnologies.UnityHub -e -h
 }
@@ -106,7 +105,6 @@ if ($shouldInstallAdminTools) {
     scoop install cpu-z
     scoop install gpu-z
     scoop install hwmonitor
-    winget install --id=MiniTool.PartitionWizard.Free -e -h
 }
 
 # Creating a Symbolic Link of the scoop apps folder on C: drive root
