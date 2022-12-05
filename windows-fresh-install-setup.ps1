@@ -16,7 +16,7 @@ winget install --id=Git.Git -e -h
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Installing scoop command-line installer
-iwr -useb get.scoop.sh | iex
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
 
 # Adding required buckets and updating scoop
 scoop bucket add games
