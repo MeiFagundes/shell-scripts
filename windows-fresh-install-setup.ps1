@@ -88,12 +88,13 @@ if ($shouldInstallWorkApps) {
 # Fonts
 if ($shouldInstallFonts) {
     Write-Host "`n------------------------------------- Installing Fonts ------------------------------------`n" -ForegroundColor cyan
-    scoop install Cascadia-Code
-    scoop install Open-Sans
-    scoop install Raleway
-    scoop install Ubuntu-NF
-    scoop install SourceCodePro-NF
-    scoop install SourceCodePro-NF-Mono
+    scoop install sudo
+    sudo scoop install -g Cascadia-Code
+    sudo scoop install -g Open-Sans
+    sudo scoop install -g Raleway
+    sudo scoop install -g Ubuntu-NF
+    sudo scoop install -g SourceCodePro-NF
+    sudo scoop install -g SourceCodePro-NF-Mono
 }
 
 # System Admin Tools
