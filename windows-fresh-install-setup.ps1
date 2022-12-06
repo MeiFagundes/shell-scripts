@@ -35,7 +35,12 @@ if ($shouldInstallBaseApps) {
     winget install --id=Parsec.Parsec -e -h
     winget install --id=Stremio.Stremio -e -h
     winget install --id=Ytmdesktop.Ytmdesktop -e -h
-    winget install TeamViewer.TeamViewer
+    winget install --id=TeamViewer.TeamViewer -e -h
+    winget install --id=Apple.iTunes -e -h
+
+    # Microsoft PowerToys
+    winget install --id=XP89DCGQ3K6VLD -e -h
+
     Write-Output "`n- Installing all Visual C++ Redistributable runtime libraries`n"
     scoop install vcredist
     scoop uninstall vcredist2005 vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist # Cleaning installers after installing VC++ Redistributable on the system
