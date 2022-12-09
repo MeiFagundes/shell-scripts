@@ -71,6 +71,7 @@ if ($shouldInstallGamingApps) {
     scoop install cemuhook
     winget install --id=Valve.Steam -e -h
     winget install --id=EpicGames.EpicGamesLauncher -e -h
+    winget install --id=ElectronicArts.EADesktop -e -h
     winget install --id=Ubisoft.Connect -e -h --force
     winget install --id=NexusMods.Vortex -e -h
 }
@@ -111,6 +112,7 @@ if ($shouldInstallAdminTools) {
     scoop install cpu-z
     scoop install gpu-z
     scoop install hwmonitor
+    scoop install furmark
 }
 
 # Creating a Symbolic Link of the scoop apps folder on C: drive root
